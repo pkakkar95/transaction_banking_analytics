@@ -1,0 +1,168 @@
+
+* {
+		padding: 0;
+		margin: 0;
+}
+
+html {
+		background: black;
+		
+}
+
+body {
+		background: #053d4e; 
+		overflow: scroll;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 150%;
+	    background: linear-gradient( to bottom right, rgba(6, 0, 255, 0.3), rgba(255, 0, 0, 0.3));
+		
+}
+#box {
+    height: 417px;
+    width: 740px;
+    position: relative;
+    top: 9px;
+    right: -420px;
+    
+}
+.container {
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		width: 100%;
+		
+}
+
+.right {
+		float: left;
+		color: #FFF;
+		width: 50%;
+		text-align: right;
+}
+
+.left {
+		float: left;
+		color: #7a7a7a;
+		width: 50%;
+		text-align: right;
+		-moz-transform: scale(-1, 1);
+		-webkit-transform: scale(-1, 1);
+		-o-transform: scale(-1, 1);
+		-ms-transform: scale(-1, 1);
+		transform: scale(-1, 1);
+		margin-top: 40px;
+}
+
+h1,
+h4 {
+		-webkit-transition: opacity .25s;
+		-moz-transition: opacity .25s;
+		-o-transition: opacity .25s;
+		-ms-transition: opacity .25s;
+		transition: opacity .25s;
+		font-family: "FARCRY", Verdana, Tahoma;
+}
+
+h1 {
+		font-size: 6vw;
+}
+
+h4 {
+		font-size: 3vw;
+}
+
+h4:first-child {
+		margin-bottom: -2vw;
+}
+
+h4:last-child {
+		margin-top: -1.7vw;
+}
+
+
+h1 {
+  text-align: center;
+  color:white;
+}
+.half {
+  float: left;
+  width: 30%;
+  position:relative;
+  left: -25px;
+  padding: 0 1em;
+}
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: initial;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+.blue label {
+  background: #2980b9;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: initial;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+.blue .tab-content {
+  background: #3498db;
+}
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+input:checked ~ .tab-content {
+  max-height: 10em;
+}
+/* Icon */
+label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+input[type=checkbox] + label::after {
+  content: "+";
+}
+input[type=radio] + label::after {
+  content: "\25BC";
+}
+input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+}
+
